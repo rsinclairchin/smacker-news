@@ -9,5 +9,8 @@ app.controller('MainCtrl', [
     {title: 'Me', upvotes: 2},
     {title: 'Nemo', upvotes: 9}
     ];
+    $scope.addPost = function(){
+      $scope.posts.push({title: "A new post!", upvotes: 0})
+    }
   }
   ])
