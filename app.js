@@ -1,4 +1,4 @@
-var app = angular.module('smackerNews', []);
+var app = angular.module('smackerNews', ['ui-router']);
 
 app.factory('posts', [function(){
   var o = {
