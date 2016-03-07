@@ -5,9 +5,9 @@ app.controller('MainCtrl', [
   function($scope){
     $scope.test = 'Hello World!'
     $scope.posts = [
-    'You',
-    'Me',
-    'Nemo'
-    ]
+    {title: 'You', upvotes: 5},
+    {title: 'Me', upvotes: 2},
+    {title: 'Nemo', upvotes: 9}
+    ];
   }
   ])
