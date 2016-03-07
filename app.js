@@ -1,13 +1,17 @@
 var app = angular.module('smackerNews', []);
 
+app.factory('posts', [function(){
+  var o = {
+    post: []
+  };
+  return o
+}])
+
 app.controller('MainCtrl', [
   '$scope',
-  function($scope){
-    $scope.posts = [
-    {title: 'You', upvotes: 5},
-    {title: 'Me', upvotes: 2},
-    {title: 'Nemo', upvotes: 9}
-    ];
+  'posts',
+  function($scope, posts){
+    $scope.posts = posts.posts;
     $scope.addPost = function(){
       if(!$scope.title || $scope.title === '') { return; }
       $scope.posts.push({
